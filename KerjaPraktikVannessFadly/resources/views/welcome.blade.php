@@ -22,7 +22,9 @@
                 <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                     <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
                         <div class="flex lg:justify-center lg:col-start-2">
-                        <img class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 65 70" fill="none" src="https://raw.githubusercontent.com/vanness204/KerjaPraktik/main/KerjaPraktikVannessFadly/LogoYulis.jpg">
+                            <img class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 65 70" fill="none" src="https://raw.githubusercontent.com/vanness204/KerjaPraktik/main/KerjaPraktikVannessFadly/LogoYulis.jpg">
+
+                        </svg>
                         </div>
                         @if (Route::has('login'))
                             <nav class="-mx-3 flex flex-1 justify-center">

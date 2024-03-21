@@ -6,17 +6,26 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img src="url_ke_gambar" class="block h-9 w-auto fill-current text-gray-800" />
-
+                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
+               <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('data-karyawan')" :active="request()->routeIs('data-karyawan')">
+                        {{ __('Data Karyawan') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('absensi')" :active="request()->routeIs('absensi')">
+                        {{ __('Absensi') }}
+                    </x-nav-link>
                 </div>
+
+
             </div>
 
             <!-- Settings Dropdown -->

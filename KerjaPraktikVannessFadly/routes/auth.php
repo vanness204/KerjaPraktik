@@ -35,11 +35,11 @@ Route::middleware('guest')->group(function () {
                 ->name('password.store');
 });
 
-Route::middleware('auth')->group(function () {
-    Route::get('verify-email', EmailVerificationPromptController::class)
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('verify-email', [EmailVerificationPromptController::class, '__invoke'])
                 ->name('verification.notice');
 
-    Route::get('verify-email/{id}/{hash}', VerifyEmailController::class)
+    Route::get('verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])
                 ->middleware(['signed', 'throttle:6,1'])
                 ->name('verification.verify');
 
@@ -57,3 +57,4 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
 });
+
