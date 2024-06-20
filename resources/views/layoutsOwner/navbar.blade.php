@@ -7,12 +7,12 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 65 70" fill="none" src="https://raw.githubusercontent.com/vanness204/KerjaPraktik/main/KerjaPraktikVannessFadly/LogoYulis.jpg">
+                        <img class="h-12 w-auto lg:h-16" src="{{ asset('images/LogoYulis.jpg') }}" alt="Logo">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-               
+
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('owner.dashboard')" :active="request()->routeIs('owner.dashboard')">
                         {{ __('Dashboard') }}
@@ -21,7 +21,7 @@
                         {{ __('Grafik Kehadiran') }}
                     </x-nav-link>
                 </div>
-                
+
             </div>
 
             <!-- Settings Dropdown -->

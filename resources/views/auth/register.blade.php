@@ -83,7 +83,7 @@
     <div class="container">
         <div class="form-container">
             <div class="logo">
-                <img src="https://raw.githubusercontent.com/vanness204/KerjaPraktik/main/KerjaPraktikVannessFadly/LogoYulis.jpg" alt="Logo">
+                <img src="{{ asset('images/LogoYulis.jpg') }}" alt="Logo">
             </div>
             <h1>Register</h1>
             <form method="POST" action="{{ route('register') }}">
